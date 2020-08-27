@@ -13,7 +13,7 @@
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
-  --color-mint: #20b2aa;
+  --color-mint: #ccffe9;
   --color-dark-mint: #0a3a2a;
   --color-black: #000000;
 
@@ -31,6 +31,9 @@
 
   /* Size */
   --size-border-radius: 5px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -125,11 +128,11 @@ p {
 }
 
 .navbar__menu__item.active {
-  border: 1px solid var(--color-mint);
+  border: 1px solid var(--color-dark-pink);
   border-radius: var(--size-border-radius);
 }
 .navbar__menu__item:hover {
-  background-color: var(--color-mint);
+  background-color: var(--color-pink);
   border-radius: var(--size-border-radius);
 }
 
@@ -144,20 +147,98 @@ p {
   width: 250px;
   height: 250;
   border-radius: 50%;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-black);
 }
 
 .home__title,
 .home__description {
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .home__contact {
-  color: var(--color-white);
+  color: var(--color-black);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   margin: 24px;
   padding: 8px 12px;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-black);
   border-radius: 20px;
+}
+
+/* Section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+.about__majors {
+  display: flex;
+  margin: 80px 0;
+  justify-content: space-between;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  font-size: 70px;
+  border-radius: 50%;
+  line-height: 170px;
+  margin: auto;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  margin-bottom: 15px;
+}
+
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.major__icon:hover i {
+  color: var(--color-dark-pink);
+  transform: scale(1.1);
+  text-shadow: 5px 5px 5px var(--color-dark-mint);
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-small);
+}
+
+.about__jobs {
+  margin-left: 100px;
+}
+
+.job {
+  display: flex;
+  align-items: center;
+}
+
+.job__logo {
+  width: 140px;
+  height: 50px;
+}
+
+.job__description {
+  margin: 10px 20px;
+  text-align: left;
+}
+
+.job__name,
+.job__period {
+  color: var(--color-light-grey);
+}
+
+.jop__name {
+  font-size: var(--font-small);
+}
+
+.job__period {
+  font-size: var(--font-micro);
 }
