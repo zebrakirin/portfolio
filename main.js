@@ -24,7 +24,14 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove("open");
   scrollIntoView(link);
+});
+
+//navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 //handle click on contact me button on home
@@ -39,3 +46,12 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener("scroll", () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
+// //project
+// const workBtnContainer = document.querySelector(".work__categories");
+// const projectContainer = document.querySelector(".work__projects");
+// const projects = document.querySelector(".project");
+// workBtnContainer.addEventListener("click", (e) => {
+//   const filter : e.target.dataset.filter;
+//   console.log(filter);
+// });
