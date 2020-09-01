@@ -236,7 +236,7 @@ p {
 .job {
   display: flex;
   align-items: center;
-  margin: 0 80px 0 50px;
+  margin: 0 20px 0 50px;
 }
 
 .job__logo {
@@ -328,6 +328,7 @@ p {
   font-size: var(--font-regular);
   padding: 8px 48px;
   width: 200px;
+  position: relative;
 }
 
 .category__btn.active,
@@ -346,13 +347,13 @@ p {
   background-color: var(--color-orange);
   border-radius: 50%;
   color: var(--color-white);
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
   display: inline-block;
-  position: relative;
-  top: -20px;
-  left: 4px;
+  position: absolute;
+  top: 10px;
+  right: 30px;
   opacity: 0;
   transition: all var(--animation-duration) ease;
 }
@@ -426,6 +427,14 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 24px;
+    --font-medium: 16px;
+    --font-regular: 12px;
+    --font-small: 10px;
+    --font-micro: 8px;
+  }
   .navbar__toggle-btn {
     display: block;
   }
@@ -447,16 +456,32 @@ p {
     margin: 8px 0;
   }
 
+  .section {
+    padding: 16px;
+    padding-top: 60px;
+  }
+
   .about__majors {
     flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 20px;
   }
 
   .skillset {
     flex-direction: column;
+  }
+
+  .work__categories {
+    margin: 10px;
+  }
+
+  .category__btn {
+    width: 80%;
+    margin: 4px 0;
   }
 
   .project {
