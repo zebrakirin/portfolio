@@ -180,6 +180,10 @@ p {
   border-radius: 20px;
 }
 
+.home__contact:hover {
+  background-color: var(--color-mint);
+}
+
 /* Section common */
 .section {
   padding: 50px;
