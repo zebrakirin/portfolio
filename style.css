@@ -125,7 +125,7 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 
-.navbar__logo > img {
+.nav__favicon {
   width: 45px;
   height: 45px;
 }
@@ -134,12 +134,9 @@ p {
   padding-right: 8px 12px;
   margin: 10px 5px;
   cursor: pointer;
-  border: 1px solid transparent;
-  border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
-  border-color: var(--color-deep-mint);
   background-color: var(--color-mint);
   border-radius: var(--size-border-radius);
 }
@@ -467,15 +464,20 @@ p {
     --font-small: 10px;
     --font-micro: 8px;
   }
-  .navbar__toggle-btn {
-    display: block;
-  }
   #navbar {
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--color-soft-mint);
   }
-
+  .nav__favicon {
+    width: 24px;
+    height: 24px;
+  }
+  .navbar__toggle-btn {
+    display: block;
+    top: 12px;
+    right: 30px;
+  }
   .navbar__menu {
     flex-direction: column;
     text-align: center;
