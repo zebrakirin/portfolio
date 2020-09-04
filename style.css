@@ -196,47 +196,20 @@ p {
 }
 
 /* About */
-.about__majors {
-  display: flex;
-  margin: 80px 0;
-  justify-content: space-between;
+.about_me {
+  text-align: left;
+  padding-left: 50px;
 }
 
-.major__icon {
-  width: 170px;
-  height: 170px;
-  font-size: 70px;
-  border-radius: 50%;
-  line-height: 170px;
-  margin: auto;
-  color: var(--color-blue);
-  border: 1px solid var(--color-blue);
-  margin-bottom: 15px;
-}
-
-.major__icon i {
-  transition: all var(--animation-duration) ease;
-}
-
-.major__icon:hover i {
-  color: var(--color-dark-pink);
-  transform: scale(1.1);
-  text-shadow: 5px 5px 5px var(--color-dark-grey);
-}
-
-.major__title,
-.major__description {
-  color: var(--color-dark-grey);
-}
-
-.major__description {
-  font-size: var(--font-small);
+.about_me h2 {
+  color: var(--color-black);
+  padding-top: 20px;
 }
 
 .job {
   display: flex;
   align-items: center;
-  margin: 0 20px 0 50px;
+  margin: 0 20px 0 100px;
 }
 
 .job__logo {
@@ -251,7 +224,7 @@ p {
 
 .job__name,
 .job__period {
-  color: var(--color-light-grey);
+  color: var(--color-black);
 }
 
 .jop__name {
@@ -274,6 +247,53 @@ p {
   margin: 20px 0;
 }
 
+.about__majors {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  font-size: 70px;
+  border-radius: 50%;
+  line-height: 170px;
+  margin: auto;
+  color: var(--color-dark-grey);
+  border: 1px solid var(--color-dark-grey);
+  margin-bottom: 15px;
+}
+
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.major__icon:hover .fa-html5 {
+  color: var(--color-dark-pink);
+  transform: scale(1.1);
+  text-shadow: 5px 5px 5px var(--color-dark-grey);
+}
+
+.major__icon:hover .fa-css3 {
+  color: var(--color-blue);
+  transform: scale(1.1);
+  text-shadow: 5px 5px 5px var(--color-dark-grey);
+}
+
+.major__icon:hover .fa-js {
+  color: var(--color-orange);
+  transform: scale(1.1);
+  text-shadow: 5px 5px 5px var(--color-dark-grey);
+}
+
+.major__title {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-small);
+}
+
 .skillset__title {
   color: var(--color-white);
 }
@@ -285,7 +305,7 @@ p {
 }
 
 .skill {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .skill__description {
@@ -475,8 +495,22 @@ p {
 
   .about__majors {
     flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 0px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .job {
+    flex-direction: column;
+    margin: 0 0 0 20px;
+  }
+
+  .job__logo {
+    width: 100px;
+    height: 30px;
+  }
+
+  .job__description {
+    text-align: center;
   }
 
   .major {
