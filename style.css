@@ -165,8 +165,7 @@ p {
   border: 2px solid var(--color-black);
 }
 
-.home__title,
-.home__description {
+.home__title {
   color: var(--color-black);
 }
 
@@ -241,13 +240,6 @@ p {
   background-color: var(--color-mint);
 }
 
-.skillset {
-  display: flex;
-  background-color: var(--color-dark-mint);
-  color: var(--color-light-white);
-  margin: 20px 0;
-}
-
 .about__majors {
   display: flex;
   justify-content: space-evenly;
@@ -295,6 +287,13 @@ p {
   font-size: var(--font-small);
 }
 
+.skillset {
+  display: flex;
+  background-color: var(--color-dark-mint);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+
 .skillset__title {
   color: var(--color-white);
 }
@@ -327,15 +326,12 @@ p {
 
 .skillset__right {
   flex-basis: 40%;
-}
-
-.tools {
-  background-color: var(--color-soft-mint);
-}
-
-.tools,
-.etc {
   padding: 20px;
+}
+
+.tools__list > li {
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 /* Works */
@@ -436,7 +432,7 @@ p {
   color: var(--color-mint);
 }
 
-.project__description h3::after {
+.project__description h3:after {
   content: "";
   width: 200px;
   height: 2px;
@@ -468,6 +464,7 @@ p {
     --font-small: 10px;
     --font-micro: 8px;
   }
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -525,6 +522,14 @@ p {
 
   .skillset {
     flex-direction: column;
+  }
+
+  .skillset__title {
+    visibility: collapse;
+  }
+
+  .skillset__right {
+    padding: 0px;
   }
 
   .work__categories {
